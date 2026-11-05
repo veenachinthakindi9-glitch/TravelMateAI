@@ -65,7 +65,7 @@ function App() {
     setReminders([]);
 
     try {
-      const response = await fetch('http://localhost:5000/api/generate-trip', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/generate-trip`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
